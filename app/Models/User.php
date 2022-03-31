@@ -41,4 +41,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function tarefa() {
+        return $this->hasMany('App\Models\Tarefa', 'foreign_key', 'user_id');
+    }
 }
