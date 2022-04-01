@@ -17,6 +17,7 @@ class CreateTarefasTable extends Migration
             $table->id();
             $table->char('nome', 50);
             $table->string('descricao')->nullable();
+            $table->boolean('finalizada');
             $table->date('datafinal')->nullable();
             $table->enum('prioridade', ['baixa', 'media', 'alta']);
             $table->foreignId('user_id');

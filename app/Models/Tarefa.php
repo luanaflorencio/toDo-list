@@ -12,12 +12,13 @@ class Tarefa extends Model
     protected $fillable = [
         'nome',
         'descricao',
+        'finalizada',
         'datafinal',
         'prioridade',
         'user_id'
     ];
-    public function user()
+    public function membro()
     {
-        return $this->belongsTo('App\Models\User', 'user_id', 'id');
+        return $this->belongsTo('App\Models\Membro', 'user_id', 'id');
     }
 }
