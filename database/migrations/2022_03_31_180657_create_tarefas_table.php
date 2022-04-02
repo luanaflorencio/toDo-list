@@ -16,7 +16,7 @@ class CreateTarefasTable extends Migration
         Schema::create('tarefas', function (Blueprint $table) {
             $table->id();
             $table->char('nome', 50);
-            $table->string('descricao')->nullable();
+            $table->string('descricao', 140)->nullable();
             $table->boolean('finalizada');
             $table->date('datafinal')->nullable();
             $table->enum('prioridade', ['baixa', 'media', 'alta']);
