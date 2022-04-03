@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\TarefaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MembroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,7 @@ Route::get('/index/tarefa', [TarefaController::class, 'index'])->name('show-tare
 Route::get('/edit/tarefa/{id}', [TarefaController::class, 'edit'])->name('edit-tarefa');
 Route::post('/update/tarefa/{id}', [TarefaController::class, 'update'])->name('update-tarefa');
 Route::get('/delete/tarefa/{id}', [TarefaController::class, 'destroy'])->name('delete-tarefa');
+
+Route::post('/create/membro', [MembroController::class, 'store'])->name('create-membro');
 
 require __DIR__ . '/auth.php';
