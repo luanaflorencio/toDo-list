@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TarefaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +23,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::post('/tarefa', [TarefaController::class, 'store'])->name('create-tarefa');
+
+require __DIR__ . '/auth.php';
