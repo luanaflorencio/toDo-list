@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\TarefaController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'dash'])->middleware(['auth'])->name('dashboard');
 
 Route::post('/tarefa', [TarefaController::class, 'store'])->name('create-tarefa');
+Route::get('/index/tarefa', [TarefaController::class, 'index'])->name('show-tarefa');
+Route::get('/edit/tarefa/{id}', [TarefaController::class, 'edit'])->name('edit-tarefa');
 
 require __DIR__ . '/auth.php';
