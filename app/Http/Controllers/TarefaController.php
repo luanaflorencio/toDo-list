@@ -124,6 +124,7 @@ class TarefaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Tarefa::findOrFail($id)->delete();
+        return redirect()->back();
     }
 }

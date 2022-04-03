@@ -26,5 +26,6 @@ Route::post('/tarefa', [TarefaController::class, 'store'])->name('create-tarefa'
 Route::get('/index/tarefa', [TarefaController::class, 'index'])->name('show-tarefa');
 Route::get('/edit/tarefa/{id}', [TarefaController::class, 'edit'])->name('edit-tarefa');
 Route::post('/update/tarefa/{id}', [TarefaController::class, 'update'])->name('update-tarefa');
+Route::get('/delete/tarefa/{id}', [TarefaController::class, 'destroy'])->name('delete-tarefa');
 
 require __DIR__ . '/auth.php';
