@@ -34,10 +34,11 @@ $( function() {
 
     <div>
         <x-label for="finalizada" :value="__('Tarefa Concluída?')"/>
-        <select style="width:50%" id="finalizada" name="finalizada" value="{{ $tarefa->finalizada }}">
-            <option value="" selected disabled>...</option>
-            <option value="1">Sim</option>
-            <option value="0">Não</option>
+        <select style="width:50%" id="finalizada" name="finalizada">
+
+            <option value="" disabled>...</option>
+            <option @if($tarefa->finalizada == "1") ? selected : null @endif value="1">Sim</option>
+            <option @if($tarefa->finalizada == "0") ? selected : null @endif value="0">Não</option>
         </select>
     </div>
 
@@ -50,9 +51,9 @@ $( function() {
         <x-label for="prioridade" :value="__('Prioridade')"/>
         <select style="width:50%"  id="prioridade" name="prioridade" value="{{ $tarefa->prioridade }}">
             <option value="" selected disabled>...</option>
-            <option value="baixa">Baixa</option>
-            <option value="media">Média</option>
-            <option value="alta">Alta</option>
+            <option @if($tarefa->prioridade == "baixa") ? selected : null @endif value="baixa">Baixa</option>
+            <option @if($tarefa->prioridade == "media") ? selected : null @endif value="media">Média</option>
+            <option @if($tarefa->prioridade == "alta") ? selected : null @endif value="alta">Alta</option>
         </select>
     </div>
 

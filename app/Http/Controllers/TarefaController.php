@@ -111,6 +111,7 @@ class TarefaController extends Controller
             'finalizada' => $request->finalizada,
             'datafinal' => $request->datafinal,
             'prioridade' => $request->prioridade,
+            'user_id' => Auth::user()->id,
         ]);
         return redirect()->to('dashboard');
     }
