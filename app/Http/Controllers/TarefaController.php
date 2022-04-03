@@ -17,7 +17,8 @@ class TarefaController extends Controller
      */
     public function index()
     {
-        return view('tarefas.create');
+        $tarefa = Tarefa::orderBy('tarefas.created_at', 'desc')->get();
+        return view('tarefas.index', compact('tarefa'));
     }
 
     /**
@@ -27,6 +28,7 @@ class TarefaController extends Controller
      */
     public function create()
     {
+        return view('tarefas.create');
     }
 
     /**

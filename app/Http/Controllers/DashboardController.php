@@ -10,7 +10,6 @@ class DashboardController extends Controller
 {
     public function dash()
     {
-        $tarefa = Tarefa::orderBy('tarefas.created_at', 'desc')->get();
-        return view('dashboard', compact('tarefa'));
+        return view('dashboard');
     }
 }

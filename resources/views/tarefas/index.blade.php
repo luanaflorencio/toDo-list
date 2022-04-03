@@ -1,11 +1,13 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
 <!DOCTYPE html>
-<head></head>
+<html lang="pt-BR">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
     <body  class="bg-gray-200 flex items-center justify-center h-screen">
-        <a href="{{route('show-tarefa')}}" class="btn btn-primary mb-4">
+        <a href="{{route('show-createT')}}" class="btn btn-primary mb-4">
+            Criar uma nova tarefa
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
-            Criar uma nova tarefa</a><br>
+        </a><br>
     
         @foreach ($tarefa as $trf)
         {{ $trf->user->name }}
