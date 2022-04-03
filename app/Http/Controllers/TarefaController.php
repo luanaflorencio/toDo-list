@@ -17,7 +17,7 @@ class TarefaController extends Controller
      */
     public function index()
     {
-        //
+        return view('tarefas.create');
     }
 
     /**
@@ -27,7 +27,6 @@ class TarefaController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -94,7 +93,26 @@ class TarefaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'nome' => 'required|min:5|max:50',
+            'descricao' => 'nullable',
+            'finalizada' => 'required',
+            'datafinal' => 'nullable|max:140',
+            'prioridade' => ['required', Rule::in(['baixa', 'media', 'alta'])]
+
+        ]);
+        if ($validator->fails()) {
+            return ("Erro na validação");
+        }
+
+        Tarefa::findOrFail($id)->update([
+            'nome' => $request->nome,
+            'descricao' => $request->descricao,
+            'finalizada' => $request->finalizada,
+            'datafinal' => $request->datafinal,
+            'prioridade' => $request->prioridade,
+        ]);
+        return redirect()->to('dashboard');
     }
 
     /**

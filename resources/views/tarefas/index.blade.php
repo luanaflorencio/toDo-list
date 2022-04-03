@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <head></head>
     <body  class="bg-gray-200 flex items-center justify-center h-screen">
-        <a href="" class="btn btn-primary mb-4">
+        <a href="{{route('show-tarefa')}}" class="btn btn-primary mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
             Criar uma nova tarefa</a><br>
     
