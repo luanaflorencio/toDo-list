@@ -26,7 +26,7 @@ class MembroController extends Controller
      */
     public function create()
     {
-        //
+        return view('createM');
     }
 
     /**

@@ -28,7 +28,9 @@ Route::get('/index/tarefa', [TarefaController::class, 'index'])->name('show-tare
 Route::get('/edit/tarefa/{id}', [TarefaController::class, 'edit'])->name('edit-tarefa');
 Route::post('/update/tarefa/{id}', [TarefaController::class, 'update'])->name('update-tarefa');
 Route::get('/delete/tarefa/{id}', [TarefaController::class, 'destroy'])->name('delete-tarefa');
+Route::get('/show/create', [TarefaController::class, 'create'])->name('show-createT');
 
+Route::get('/show/membros', [MembroController::class, 'create'])->name('showC-membros');
 Route::post('/create/membro', [MembroController::class, 'store'])->name('create-membro');
 
 require __DIR__ . '/auth.php';
