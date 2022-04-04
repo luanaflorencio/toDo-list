@@ -34,12 +34,12 @@
                     </div>
                     
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="btn btn-primary">Home</a>
+                        <a href="{{ url('/dashboard') }}" style="background-color:#55868c" class="btn btn-primary">Home</a>
                     @else
-                        <a href="{{ route('login') }}" class="btn btn-primary">Log in</a>
+                        <a href="{{ route('login') }}" style="background-color:#55868c" class="btn btn-primary">Log in</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 btn btn-primary">Cadastro</a>
+                            <a href="{{ route('register') }}" style="background-color:#55868c" class="ml-4 btn btn-primary">Cadastro</a>
                         @endif
                     @endauth
                 </div>
