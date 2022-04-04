@@ -13,17 +13,19 @@
     <form method="post" action="{{route('create-membro')}}">
         @csrf
     
-        <div>
+        <div style="margin-left: 26%">
+          <div>
             <x-label for="email" :value="__('E-mail:')"/>
-            <x-input  autocomplete="off" id="email" class="block mt-1 w-full" type="text" name="email" :value="old('email')" required autofocus/>
+            <x-input autocomplete="off" id="email" class="block mt-1 w-full" type="text" name="email" :value="old('email')" style="width:60%" required autofocus/>
         </div>
         
         <div>
             <x-label for="nome" :value="__('Nome:')"/>
-            <x-input  autocomplete="off" id="nome" class="block mt-1 w-full" type="text" name="nome" minlength="5" :value="old('nome')" required autofocus/>
+            <x-input autocomplete="off" id="nome" class="block mt-1 w-full" type="text" name="nome" minlength="5" :value="old('nome')" style="width:60%" required autofocus/>
         </div>
-    
-        <x-button class="ml-72 bg-blue-500 hover:bg-blue-400 mt-8">
+        </div>
+            
+        <x-button style="background-color:#374151" class="ml-72 bg-blue-500 hover:bg-blue-400 mt-8">
             {{ __('Enviar') }}
             </x-button>
     </form>

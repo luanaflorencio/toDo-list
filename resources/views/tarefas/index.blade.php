@@ -1,14 +1,29 @@
+
+<x-app-layout>
+    <x-slot name="header" class="bg-white shadow">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+          {{ __("Tarefas" ) }}
+      </h2>
+    </x-slot>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
     <body  class="bg-gray-200 flex items-center justify-center h-screen">
-        <a href="{{route('show-createT')}}" class="btn btn-primary mb-4">
+        
+        <div class="py-12">
+            <div class="max-w-7xl max-auto sm:px-6 lg:px-8">
+              <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="mr-2">
+                  <div class="p-4">
+                    <div class="p-6 bg-white border-b border-gray-200">
+                        
+        <a href="{{route('show-createT')}}" style="background-color:#374151" class="btn btn-primary mb-4">
             Criar uma nova tarefa
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display:inline;" height="24px" viewBox="0 0 26 26" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M13 11h-2v3H8v2h3v3h2v-3h3v-2h-3zm1-9H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
         </a><br>
-    
+        
         @foreach ($tarefa as $trf)
         {{ $trf->user->name }}
         
@@ -65,7 +80,13 @@
         </div>
         
     @endforeach
-   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </x-app-layout>
     </body>
 </html>
 <script src="https://cdn.jsdeli.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

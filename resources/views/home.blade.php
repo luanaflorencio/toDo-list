@@ -8,9 +8,9 @@
 </head>
 <body>
     <div style="display:flex; justify-content: center!important;">
-        <a href="{{url('index/tarefa')}} " style="margin-right: 50px;" class="btn btn-primary">Tela de Listagens 
+        <a href="{{url('index/tarefa')}} " style="margin-right: 50px; background-color:#374151" class="btn btn-primary">Tela de Listagens 
             <svg xmlns="http://www.w3.org/2000/svg" style="display:inline;" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg></a>
-        <a href="{{url('show/membros')}}"  style="margin-left: 50px;" class="btn btn-primary">Cadastro de Membros
+        <a href="{{url('show/membros')}}"  style="margin-left: 50px; background-color:#374151" class="btn btn-primary">Cadastro de Membros
              <svg xmlns="http://www.w3.org/2000/svg" style="display:inline;" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg></a>
     </div>
     
